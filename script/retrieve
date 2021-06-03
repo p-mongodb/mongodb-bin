@@ -1,0 +1,9 @@
+#!/bin/sh
+
+version="$1"
+
+if test -z "$version"; then
+  echo "Usage: retrieve <version>"
+fi
+
+rsync -av /home/build/apps/exp/mongo/build/install/bin/ ~/mongodb-bin/mongo/devuan/$version
